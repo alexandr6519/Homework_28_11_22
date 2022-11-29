@@ -29,7 +29,7 @@
 }
 catch
 {
-    Console.WriteLine("You must input integer numbers only!!!");
+    Console.WriteLine("You must input integer positive numbers only!!!");
 }
 
 double GetDistance(int[] array1, int[] array2)
