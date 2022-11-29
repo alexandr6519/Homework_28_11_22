@@ -2,23 +2,30 @@
 {
     Console.WriteLine("Input the size of space");
     int n = Convert.ToInt32(Console.ReadLine());
-    int[] point1 = new int[n];
-    int[] point2 = new int[n];
-    for (int i = 0; i < n; i++)
+    if (n < 1)
     {
-        Console.WriteLine($"Input {i + 1} coordinate of first point");
-        point1[i] = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("This number can't be size of space! Please, try again!");
     }
-    for (int i = 0; i < n; i++)
+    else
     {
-        Console.WriteLine($"Input {i + 1} coordinate of second point");
-        point2[i] = Convert.ToInt32(Console.ReadLine());
+        int[] point1 = new int[n];
+        int[] point2 = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"Input {i + 1} coordinate of first point");
+            point1[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"Input {i + 1} coordinate of second point");
+            point2[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.Write("The distance beetween points ");
+        PrintArray(point1);
+        Console.Write(" and ");
+        PrintArray(point2);
+        Console.Write(" is : {0:f4}", GetDistance(point1, point2));
     }
-    Console.Write("The distance beetween points ");
-     PrintArray(point1);
-     Console.Write(" and ");
-      PrintArray(point2);
-     Console.Write(" is : {0:f4}", GetDistance(point1, point2));
 }
 catch
 {
